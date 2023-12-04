@@ -1,3 +1,5 @@
+import sys
+
 class MortgageCalculator:
     def __init__(self, principal, annual_rate, years, fixed_rate=True, additional_payments=0):
         
