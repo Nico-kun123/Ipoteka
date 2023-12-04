@@ -7,7 +7,7 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
@@ -28,7 +28,7 @@ jobs:
           python -m pytest tests.py
 
   deploy:
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
