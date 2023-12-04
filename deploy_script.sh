@@ -8,5 +8,5 @@ python3 -m venv myenv
 source myenv/bin/activate
 pip3 install -r requirements.txt
 
-# Запуск программы
-python3 ipoteka.py
+# Запуск программы с передачей аргументов
+python3 ipoteka.py 100000 5 30 fixed 100

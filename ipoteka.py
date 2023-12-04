@@ -44,18 +44,16 @@ class MortgageCalculator:
 
 
 def main():
-    principal = float(input("\nВведите сумму ипотеки: "))
-    annual_rate = float(input("Введите количество годовых процентов (%): "))
-    years = int(input("Введите количество лет: "))
-
-    fixed_rate = input("Фиксированная или переменная ставка? (Введите 'fixed' или 'var'): ").lower() == "fixed"
-    additional_payments = float(input("Введите дополнительные ежемесячные выплаты (если таковые есть): "))
+    principal = float(sys.argv[1])
+    annual_rate = float(sys.argv[2])
+    years = int(sys.argv[3])
+    fixed_rate = sys.argv[4].lower() == "fixed"
+    additional_payments = float(sys.argv[5])
 
     calculator = MortgageCalculator(principal, annual_rate, years, fixed_rate, additional_payments)
     monthly_payment = calculator.calculate_monthly_payment()
 
     print(f"\nВаша ежемесячная выплата: ${monthly_payment} ({calculator.fixed_rate, calculator.additional_payments})\n")
-
 
 if __name__ == "__main__":
     main()
