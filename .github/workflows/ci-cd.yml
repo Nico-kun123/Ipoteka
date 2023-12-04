@@ -7,7 +7,7 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-16.04.07
+    runs-on: ubuntu-16.04
  
     steps:
       - name: Checkout Repository
@@ -20,14 +20,14 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          pip3 install -r requirements.txt
+          pip install -r requirements.txt
 
       - name: Run Tests
         run: |
-          python3 -m pytest tests.py
+          python -m pytest tests.py
   
   deploy:
-    runs-on: ubuntu-16.04.07
+    runs-on: ubuntu-16.04
  
     steps:
       - name: Checkout Repository
@@ -40,7 +40,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          pip3 install -r requirements.txt
+          pip install -r requirements.txt
 
       - name: Deploy to Production
-        run: deploy_script.sh
+        run: ./deploy_script.sh
