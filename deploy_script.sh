@@ -9,4 +9,4 @@ source myenv/bin/activate
 pip3 install -r requirements.txt
 
 # Запуск программы
-python3 your_program.py
+python3 ipoteka.py
