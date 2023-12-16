@@ -55,7 +55,7 @@ def main():
     calculator = MortgageCalculator(principal, annual_rate, years, fixed_rate, additional_payments)
     monthly_payment = calculator.calculate_monthly_payment()
 
-    print(f"\nВаша ежемесячная выплата: ${monthly_payment} ({calculator.fixed_rate, calculator.additional_payments})\n")
+    print(f"\nВаша ежемесячная выплата: ${monthly_payment} ({calculator.fixed_rate})\n")
 
 if __name__ == "__main__":
     main()
